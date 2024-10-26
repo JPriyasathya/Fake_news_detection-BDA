@@ -3,8 +3,8 @@ from flask import Flask, request, jsonify
 import joblib
 
 # Load model and vectorizer
-model = joblib.load('random_forest_model.pkl')
-vectorizer = joblib.load('vectorizer.pkl')
+model = joblib.load('random_forest_model (1).pkl')
+vectorizer = joblib.load('vectorizer (1).pkl')
 
 app = Flask(__name__)
 
