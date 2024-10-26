@@ -8,6 +8,15 @@ vectorizer = joblib.load('vectorizer.pkl')
 
 app = Flask(__name__)
 
+# Root route to confirm the app is running
+@app.route('/')
+def home():
+    return jsonify({
+        'message': 'Welcome to the Fake News Detection API!',
+        'usage': 'Send a POST request to /predict with JSON {"text": "your_text_here"}'
+    })
+
+# Prediction route
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
